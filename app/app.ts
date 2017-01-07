@@ -1,6 +1,8 @@
 import {Component} from '@angular/core';
 import {Platform, ionicBootstrap} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
+import {ConnectionService} from './providers/connection-service/connection-service';
+
 import {HomePage} from './pages/home/home';
 import {MenuTestPage} from './pages/menu-test/menu-test';
 import {GeneratedTestPage} from './pages/generated-test/generated-test'
@@ -34,4 +36,11 @@ export class MyApp {
   }
 }
 
-ionicBootstrap(MyApp);
+ionicBootstrap(MyApp,[ConnectionService],{
+  menuType:'push',
+  platforms:{
+    ios:{
+      menuType:'overlay'
+    }
+  }
+});
