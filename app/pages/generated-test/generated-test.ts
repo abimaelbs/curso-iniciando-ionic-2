@@ -6,6 +6,7 @@ import {ConnectionService} from './../../providers/connection-service/connection
   templateUrl: 'build/pages/generated-test/generated-test.html',
   //providers: [ConnectionService]
 })
+
 export class GeneratedTestPage {
   constructor(private nav: NavController,private connectionService: ConnectionService) {
 
