@@ -1,0 +1,32 @@
+
+<ion-navbar *navbar>
+  <ion-title>List</ion-title>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+</ion-navbar>
+
+<ion-content padding class="list-test">
+  <ion-list>
+    <ion-item-group>
+      <ion-item-divider>GoT</ion-item-divider>
+
+      <ion-item-sliding *ngFor="let p of personagens">
+        <ion-item>{{ p }}</ion-item>
+        <ion-item-options>
+          <button>
+            <ion-icon name="more"></ion-icon>
+          <!--  Detalhes  -->
+          </button>
+          <button secondary>
+            <ion-icon name="text"></ion-icon>
+          <!--  Mensagem -->
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+
+    </ion-item-group>
+
+  </ion-list>
+
+</ion-content>
