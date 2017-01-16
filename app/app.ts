@@ -10,6 +10,7 @@ import {AlertPage} from './pages/alert/alert';
 import {ButtonTestPage} from './pages/button-test/button-test';
 import {CardTestPage} from './pages/card-test/card-test';
 import {IconTestPage} from './pages/icon-test/icon-test';
+import {InputTestPage} from './pages/input-test/input-test';
 
 @Component({
   //template: '<ion-nav [root]="rootPage"></ion-nav>'
@@ -29,8 +30,10 @@ export class MyApp {
       {component:AlertPage,title:'Alert', icon:'alert'},
       {component:ButtonTestPage,title:'Button', icon:'menu'},
       {component:CardTestPage,title:'Card',icon:'menu'},
-      {component:IconTestPage,title:'Icon',icon:'menu'}
+      {component:IconTestPage,title:'Icon',icon:'menu'},
+      {component:InputTestPage,title:'Input',icon:'menu'}
     ];
+    
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
