@@ -5,7 +5,7 @@
   <button menuToggle>
     <ion-icon name="menu"></ion-icon>
   </button>
-  
+
   <ion-buttons right>
     <button menuToggle="right">
       <ion-icon name="menu"></ion-icon>
@@ -15,7 +15,19 @@
 
 <ion-content padding class="generated-test">
   <p>Página gerada automaticamente.</p>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Digite o cep</ion-label>
+      <ion-input name="cep" type="text" [(ngModel)]="cep"></ion-input>
+    </ion-item>
+  </ion-list>
 
   <button (click)="buscarCep()">Request CEP</button>
+
+  <p>Bairro: {{ bairro }}</p>
+  <p>Cidade: {{ cidade }}</p>
+  <p>Rua: {{ rua }}</p>
+  <p>UF: {{ uf }}</p>
+  <p>CEP:{{ cep }}</p>
 
 </ion-content>

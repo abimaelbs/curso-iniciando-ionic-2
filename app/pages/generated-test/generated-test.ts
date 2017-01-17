@@ -8,14 +8,22 @@ import {ConnectionService} from './../../providers/connection-service/connection
 })
 
 export class GeneratedTestPage {
-  constructor(private nav: NavController,private connectionService: ConnectionService) {
+  cep:string;
+  bairro: string;
+  cidade:string;
+  rua:string;
+  uf:string;
 
-  }
+  constructor(private nav: NavController,private connectionService: ConnectionService) {}
 
   buscarCep() : void {
-    this.connectionService.getCep('78058602')
+    this.connectionService.getCep(this.cep)
     .then((res) =>{
       let json = res.json();
+      this.bairro = json.bairro;
+      this.cidade =  json.localidade;
+      this.rua =  json.logradouro;
+      this.uf =  json.uf;
       console.log(json);
     }).catch((err) =>{
       console.log(err);

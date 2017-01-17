@@ -12,6 +12,8 @@ import {CardTestPage} from './pages/card-test/card-test';
 import {IconTestPage} from './pages/icon-test/icon-test';
 import {InputTestPage} from './pages/input-test/input-test';
 import {ListTestPage} from './pages/list-test/list-test';
+import {GridTestPage} from './pages/grid-test/grid-test';
+import {ModalTestPage} from './pages/modal-test/modal-test';
 
 @Component({
   //template: '<ion-nav [root]="rootPage"></ion-nav>'
@@ -33,7 +35,9 @@ export class MyApp {
       {component:CardTestPage,title:'Card',icon:'menu'},
       {component:IconTestPage,title:'Icon',icon:'menu'},
       {component:InputTestPage,title:'Input',icon:'menu'},
-      {component:ListTestPage,title:'List',icon:'menu'}
+      {component:ListTestPage,title:'List',icon:'menu'},
+      {component:GridTestPage,title:'Grid',icon:'menu'},
+      {component:ModalTestPage,title:'Modal',icon:'menu'}
     ];
 
     platform.ready().then(() => {
