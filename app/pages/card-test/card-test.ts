@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 /*
   Generated class for the CardTestPage page.
@@ -11,5 +11,11 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'build/pages/card-test/card-test.html',
 })
 export class CardTestPage {
-  constructor(private nav: NavController) {}
+  constructor(private nav: NavController,public params:NavParams) {
+    console.log(params.get('mensagem'));
+  }
+
+  voltar() {
+    this.nav.pop(); // pop() - retira o elemento que esta mais ao topo da pilha
+  }
 }

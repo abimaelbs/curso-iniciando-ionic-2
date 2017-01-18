@@ -14,6 +14,7 @@ import {InputTestPage} from './pages/input-test/input-test';
 import {ListTestPage} from './pages/list-test/list-test';
 import {GridTestPage} from './pages/grid-test/grid-test';
 import {ModalTestPage} from './pages/modal-test/modal-test';
+import {NavigationTestPage} from './pages/navigation-test/navigation-test';
 
 @Component({
   //template: '<ion-nav [root]="rootPage"></ion-nav>'
@@ -21,8 +22,11 @@ import {ModalTestPage} from './pages/modal-test/modal-test';
 })
 export class MyApp {
 
+  home: any = HomePage;
+  generated:any = GeneratedTestPage;GeneratedTestPage
+
   pages: Array<{component:any, title: string, icon: string}>;
-  rootPage: any = HomePage;
+  rootPage: any = this.home;
 
   constructor(platform: Platform) {
 
@@ -37,7 +41,8 @@ export class MyApp {
       {component:InputTestPage,title:'Input',icon:'menu'},
       {component:ListTestPage,title:'List',icon:'menu'},
       {component:GridTestPage,title:'Grid',icon:'menu'},
-      {component:ModalTestPage,title:'Modal',icon:'menu'}
+      {component:ModalTestPage,title:'Modal',icon:'menu'},
+      {component:NavigationTestPage,title:'Navigatin',icon:'menu'}
     ];
 
     platform.ready().then(() => {
