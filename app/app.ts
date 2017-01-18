@@ -15,6 +15,7 @@ import {ListTestPage} from './pages/list-test/list-test';
 import {GridTestPage} from './pages/grid-test/grid-test';
 import {ModalTestPage} from './pages/modal-test/modal-test';
 import {NavigationTestPage} from './pages/navigation-test/navigation-test';
+import {TabTestPage} from './pages/tab-test/tab-test';
 
 @Component({
   //template: '<ion-nav [root]="rootPage"></ion-nav>'
@@ -42,7 +43,8 @@ export class MyApp {
       {component:ListTestPage,title:'List',icon:'menu'},
       {component:GridTestPage,title:'Grid',icon:'menu'},
       {component:ModalTestPage,title:'Modal',icon:'menu'},
-      {component:NavigationTestPage,title:'Navigatin',icon:'menu'}
+      {component:NavigationTestPage,title:'Navigatin',icon:'menu'},
+      {component:TabTestPage,title:'Tab',icon:'menu'},
     ];
 
     platform.ready().then(() => {
